@@ -1,0 +1,10 @@
+.App {
+  font-size: 0.9rem;
+}
+.form-control {
+  font-size: 0.8rem !important;
+  line-height: 1 !important;
+}
+.form-select {
+  line-height: 1 !important;
+}
