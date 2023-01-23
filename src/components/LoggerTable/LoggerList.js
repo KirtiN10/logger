@@ -3,28 +3,10 @@ import React, { useState, useMemo } from "react";
 import Table from 'react-bootstrap/Table';
 import './LoggerList.scss';
 import Pagination from "../../hooks/Pagination.js";
-import { useSortableTable } from "../../hooks/useSortableTable";
 let PageSize = 10;
 const LoggerList = ({ logs, handleSorting }) => {
 
   const [currentPage, setCurrentPage] = useState(1);
-//   const [currentPage, setCurrentPage] = useState(1);
-
-//   const handleSorting = (sortField, sortOrder) => {
-// 		if (sortField) {
-// 			const sorted = [...logs].sort((a, b) => {
-// 				if (a[sortField] === null) return 1;
-// 				if (b[sortField] === null) return -1;
-// 				if (a[sortField] === null && b[sortField] === null) return 0;
-// 				return (
-// 				a[sortField].toString().localeCompare(b[sortField].toString(), "en", {
-// 					numeric: true,
-// 				}) * (sortOrder === "asc" ? 1 : -1)
-// 				);
-// 			});
-// 			setSortedLogs(sorted);
-// 		}
-// 	}
 
 	const currentTableData = useMemo(() => {
 		const firstPageIndex = (currentPage - 1) * PageSize;
