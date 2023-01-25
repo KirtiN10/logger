@@ -3,3 +3,21 @@
     display: flex;
     justify-content: center;
 }
+
+thead span::after {
+    content: '\21C5';
+    display: inline-block;
+    margin-left: 1em;
+}
+
+thead span.ascending::after {
+    content: '\2193';
+    display: inline-block;
+    margin-left: 1em;
+  }
+  
+  thead span.descending::after {
+    content: '\2191';
+    display: inline-block;
+    margin-left: 1em;
+  }
